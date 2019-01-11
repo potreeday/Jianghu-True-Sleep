@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<fight_scene id="1">
+		<name>永安镇</name>
+		<remark>和平安宁的小镇，故事开始的地方</remark>
+	</fight_scene>
+	<fight_scene id="2">
+		<name>沉香溪</name>
+	</fight_scene>
+    <fight_scene id="3">
+		<name>白桦林</name>
+	</fight_scene>
+	<fight_scene id="4">
+		<name>葫芦山</name>
+	</fight_scene>
+	<fight_scene id="5">
+		<name>归元寺</name>
+	</fight_scene>
+	<fight_scene id="6">
+		<name>太和殿</name>
+	</fight_scene>
+	<fight_scene id="7">
+		<name>凌霄城</name>
+	</fight_scene>
+	<fight_scene id="8">
+		<name>璇女峰</name>
+	</fight_scene>
+	<fight_scene id="9">
+		<name>百花谷</name>
+	</fight_scene>
+	<fight_scene id="10">
+		<name>大 理</name>
+	</fight_scene>
+	<fight_scene id="11">
+		<name>藏兵阁</name>
+	</fight_scene>
+</resources>
