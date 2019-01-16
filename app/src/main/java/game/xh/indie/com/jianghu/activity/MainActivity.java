@@ -1,4 +1,4 @@
-package game.xh.indie.com.jianghu.ui;
+package game.xh.indie.com.jianghu.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 //初始化主角
                 try {
                     jh.setRole(SaveOrLoadPlayer.loadPlayer(MainActivity.this));
-                    System.out.println("主角现在在："+jh.getRole().getFsNow());
                 }catch(IOException e){
                     jh.setRole(new Role());
                 }

@@ -3,6 +3,7 @@ package game.xh.indie.com.jianghu.dao;
 public class FightScene {
     private int id;
     private String name;
+    private String remark;
 
     public String getRemark() {
         return remark;
@@ -11,8 +12,6 @@ public class FightScene {
     public void setRemark(String remark) {
         this.remark = remark;
     }
-
-    private String remark;
 
     public int getId() {
         return id;

@@ -31,12 +31,12 @@ public class Jianghu extends Application {
         //从XML配置中读取活动场景
         //初始化活动场景列表
         lFscene=new ArrayList<FightScene>();
-        getSceneDate(is,assetManager,xmlParser,"fight_scene.xml");
+        getSceneData(is,assetManager,xmlParser,"fight_scene.xml");
 
     }
 
     //从配置文件中读取活动场景数据
-    public void getSceneDate(InputStream is,AssetManager am,XmlPullParser xpp,String fileName){
+    public void getSceneData(InputStream is,AssetManager am,XmlPullParser xpp,String fileName){
         try {
             //打开活动场景配置文件
             is = am.open(fileName);

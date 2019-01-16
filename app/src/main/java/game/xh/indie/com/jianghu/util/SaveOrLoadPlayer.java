@@ -12,6 +12,10 @@ import static android.content.Context.MODE_PRIVATE;
 
 
 public class SaveOrLoadPlayer {
+    /**
+     * 将要存档的人物数据保存到文件中
+     * @param role 要存档的角色对象
+     */
     public static void savePlayer(Role role, Activity activity) throws IOException {
         //获取要存档的人物数据
         String str="name="+ role.getName()+"&atk="+ role.getAtk()+"&def="+ role.getDef()+"&maxHealth="+ role.getMaxHealth()+"&maxEnergy="+ role.getMaxEnergy()+
@@ -26,6 +30,9 @@ public class SaveOrLoadPlayer {
         loadPlayer(activity);
     }
 
+    /**
+     * 从存档文件中读取人物数据
+     */
     public static Role loadPlayer(Activity activity) throws IOException{
         //读取存档的人物数据
         FileInputStream fis = activity.openFileInput("SaveFile.dat");
