@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<fight_scene>
 		<id>1</id>
 		<name>永安镇</name>
 		<remark>和平安宁的小镇，故事开始的地方</remark>
 	</fight_scene>
-	<fight_scene >
+	<fight_scene>
 		<id>2</id>
 		<name>沉香溪</name>
 		<remark>一条干净的小溪，过路的商旅都喜欢到这里宿营，不过最近这里好像不太平</remark>

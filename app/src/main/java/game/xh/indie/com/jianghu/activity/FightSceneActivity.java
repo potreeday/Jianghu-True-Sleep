@@ -146,7 +146,6 @@ public class FightSceneActivity extends AppCompatActivity {
 
         //更换场景的时候，如果角色正在忙，那么停止当前工作
         if (role.getPlayerStatus() !=0) role.stopAction();
-
         role.setFsNow(((Button)v).getId());
         try {
             SaveOrLoadPlayer.savePlayer(role,FightSceneActivity.this);
@@ -210,5 +209,4 @@ public class FightSceneActivity extends AppCompatActivity {
     public void onDestroy(){
         super.onDestroy();
     }
-
 }

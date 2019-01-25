@@ -12,7 +12,7 @@ public class FightUnit {
     private int def;    //防御值
     private int criticalHitRate;    //会心一击率
     private int dodgeRate;    //闪避率
-    private int attackSpeed;    //攻击速度
+    private float attackSpeed;    //攻击速度
     private int counterattackRate; //反击率
     private int side;
 
@@ -22,7 +22,7 @@ public class FightUnit {
 
     }
 
-    public FightUnit(String name, int health, int energy, int atk, int def, int criticalHitRate, int dodgeRate, int attackSpeed,int counterattackRate) {
+    public FightUnit(String name, int health, int energy, int atk, int def, int criticalHitRate, int dodgeRate, float attackSpeed,int counterattackRate) {
         this.name = name;
         this.health = health;
         this.energy = energy;
@@ -32,7 +32,6 @@ public class FightUnit {
         this.dodgeRate = dodgeRate;
         this.attackSpeed = attackSpeed;
         this.counterattackRate = counterattackRate;
-        this.side=-1;
     }
 
     /**
@@ -174,11 +173,11 @@ public class FightUnit {
         this.dodgeRate = dodgeRate;
     }
 
-    public int getAttackSpeed() {
+    public float getAttackSpeed() {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(int attackSpeed) {
+    public void setAttackSpeed(float attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
