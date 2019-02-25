@@ -189,10 +189,6 @@ public class FightUnit {
         this.counterattackRate = counterattackRate;
     }
 
-    public int getSide() {
-        return side;
-    }
-
     public void setSide(int side) {
         this.side = side;
     }

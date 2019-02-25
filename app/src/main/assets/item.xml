@@ -11,10 +11,11 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_01</pic>
 	</item>
 	<item>
 		<id>10001</id>
-		<name>桃木剑</name>
+		<name>银尖枪</name>
 		<type>1</type>
 		<price>20</price>
 		<weight>1</weight>
@@ -23,6 +24,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_02</pic>
 	</item>
 	<item>
 		<id>10002</id>
@@ -35,6 +37,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>10003</id>
@@ -47,6 +50,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>20001</id>
@@ -59,6 +63,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>20002</id>
@@ -71,6 +76,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>20003</id>
@@ -83,6 +89,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>20004</id>
@@ -95,6 +102,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>31001</id>
@@ -107,6 +115,7 @@
 		<skillCanLearn>1001</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>32001</id>
@@ -119,6 +128,7 @@
 		<skillCanLearn>2001</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>40001</id>
@@ -131,6 +141,7 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>100</healthCanAdd>
 		<energyCanAdd>0</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 	<item>
 		<id>40002</id>
@@ -143,5 +154,6 @@
 		<skillCanLearn>0</skillCanLearn>
 		<healthCanAdd>0</healthCanAdd>
 		<energyCanAdd>50</energyCanAdd>
+		<pic>item_00</pic>
 	</item>
 </resources>

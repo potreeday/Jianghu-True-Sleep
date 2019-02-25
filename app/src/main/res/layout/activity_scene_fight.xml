@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/layout_scene"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal"/>
-
-    <game.xh.indie.com.jianghu.activity.widget.ScrollViewWithBorder
-        android:id="@+id/s_fight"
+    <FrameLayout
+        android:id="@+id/home_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        app:layout_borderWidth="1dp"
-        app:layout_borderColor="#848484"
-        android:fillViewport="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="8dp" >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    </FrameLayout>
 
-        <TextView
-            android:id="@+id/t_fight_log"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"/>
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray"
+        />
 
-    </game.xh.indie.com.jianghu.activity.widget.ScrollViewWithBorder>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/bottom_tab_layout"
+        android:layout_width="match_parent"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="@android:color/holo_blue_light"
+        app:tabGravity="center"
+        android:layout_height="50dp">
+
+    </android.support.design.widget.TabLayout>
+
 </LinearLayout>

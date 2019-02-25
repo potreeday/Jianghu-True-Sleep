@@ -20,35 +20,35 @@ import game.xh.indie.com.jianghu.dao.Role;
 import game.xh.indie.com.jianghu.dao.Skill;
 
 public class Jianghu extends Application {
+    final public static int[] levelNeed = {100, 250, 450, 700, 1050, 1500, 2050};      //主角升级所需经验
+
     private static List<FightScene> lFscene;    //存储游戏场景配置
     private static List<List<Enemy>> lEnemy;    //存储怪物模板配置
+    private static List<List<Enemy>> lBossEnemy;    //存储BOSS怪物模板配置
     private static List<Item> lItem;            //存储道具模板配置
     private static List<Skill> lSkill;          //存储技能模板配置
-    private static List lvl_exp;
-    private Role role;
 
-    //初始化配置，活动场景、技能
+    private static Role role;
+
+    //初始化配置，活动场景、怪物、道具
     public void init(){
-        AssetManager assetManager = this.getAssets();
+        AssetManager assetManager = getAssets();
         XmlPullParser xmlParser= Xml.newPullParser();
         InputStream is = null;
         //从XML配置中读取游戏场景
         lFscene=new ArrayList<FightScene>();
         getSceneData(is,assetManager,xmlParser,"fight_scene.xml");
-        //给每个游戏场景，创建一个专门的怪物列表
+        //给每个游戏场景，创建专门的怪物和BOSS怪物列表
         lEnemy = new ArrayList<List<Enemy>>();
+        lBossEnemy = new ArrayList<List<Enemy>>();
         for (int i=0;i<lFscene.size();i++){
             lEnemy.add(new ArrayList<Enemy>());
+            lBossEnemy.add(new ArrayList<Enemy>());
         }
         getEnemyData(is,assetManager,xmlParser,"enemy.xml");
         //创建物品的模板列表
         lItem = new ArrayList<Item>();
         getItemData(is,assetManager,xmlParser,"item.xml");
-/*        try {
-            is.close();
-        } catch (IOException e) {
-            Log.i("InitError","读取数据失败，请检查配置文件⊙﹏⊙∥∣°");
-        }*/
     }
 
     /**
@@ -78,20 +78,22 @@ public class Jianghu extends Application {
                             item.setName(xpp.nextText());
                         }else if(xpp.getName().equals("type")){
                             item.setType(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("price")){
                             item.setPrice(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("weight")){
                             item.setWeight(Float.parseFloat(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("dmg")){
                             item.setDmg(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("def")){
                             item.setDef(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("skillCanLearn")){
                             item.setSkillCanLearn(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("healthCanAdd")){
                             item.setHealthCanAdd(Integer.parseInt(xpp.nextText()));
-                        }else if(xpp.getName().equals("remark")){
+                        }else if(xpp.getName().equals("energyCanAdd")){
                             item.setEnergyCanAdd(Integer.parseInt(xpp.nextText()));
+                        }else if(xpp.getName().equals("pic")){
+                            item.setPic(xpp.nextText());
                         }
                         break;
                     case XmlPullParser.END_TAG:
@@ -218,7 +220,11 @@ public class Jianghu extends Application {
                     case XmlPullParser.END_TAG:
                         //从io流中读取到怪物结束的标签，将赋值后的怪物添加到对应场景的怪物列表中
                         if(xpp.getName().equals("enemy")){
-                            lEnemy.get(enemy.getSceneBelong()-1).add(enemy);
+                            if(enemy.getIsBoss() == 1){
+                                lBossEnemy.get(enemy.getSceneBelong()-1).add(enemy);
+                            }else{
+                                lEnemy.get(enemy.getSceneBelong()-1).add(enemy);
+                            }
                         }
                         break;
                 }
@@ -242,6 +248,10 @@ public class Jianghu extends Application {
         return lEnemy;
     }
 
+    public static List<List<Enemy>> getlBossEnemy() {
+        return lBossEnemy;
+    }
+
     public static List<Item> getlItem() {
         return lItem;
     }
@@ -250,15 +260,11 @@ public class Jianghu extends Application {
         return lSkill;
     }
 
-    public static List getLvl_exp() {
-        return lvl_exp;
-    }
-
     public void setRole(Role role) {
         this.role = role;
     }
 
-    public Role getRole() {
+    public static Role getRole() {
         return role;
     }
 }

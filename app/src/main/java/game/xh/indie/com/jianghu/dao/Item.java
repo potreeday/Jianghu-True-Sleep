@@ -14,8 +14,18 @@ public class Item {
     private int healthCanAdd;  //服用丹药能增加的生命值上限
     private int energyCanAdd;  //服用丹药能增加的内力上限
 
+    private String  pic;        //道具图标
+
     public Item(){
 
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
     public int getId() {

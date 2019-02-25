@@ -11,10 +11,10 @@ import java.io.IOException;
 import game.xh.indie.com.jianghu.Jianghu;
 import game.xh.indie.com.jianghu.R;
 import game.xh.indie.com.jianghu.dao.Role;
-import game.xh.indie.com.jianghu.util.SaveOrLoadPlayer;
+import game.xh.indie.com.jianghu.control.SaveOrLoadPlayer;
 
 public class MainActivity extends AppCompatActivity {
-    private Jianghu jh;
+    private Jianghu jianghuApp;
     private Button b_start;
 
     @Override
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //初始化游戏配置
-        jh=(Jianghu)getApplication();
-        jh.init();
+        jianghuApp = ((Jianghu)getApplication());
+        jianghuApp.init();
 
         //开始游戏
         b_start=(Button)this.findViewById(R.id.b_start);
@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //初始化主角
                 try {
-                    jh.setRole(SaveOrLoadPlayer.loadPlayer(MainActivity.this));
+                    jianghuApp.setRole(SaveOrLoadPlayer.loadPlayer(MainActivity.this));
                 }catch(IOException e){
-                    jh.setRole(new Role());
+                    jianghuApp.setRole(new Role());
                 }
 
                 Intent intent=new Intent(MainActivity.this,FightSceneActivity.class);

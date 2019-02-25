@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/t_rolename"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="EXP："
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/t_exp_now"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/role" />
+
+            <ImageView
+                android:id="@+id/iv_weapon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/role_weapon" />
+
+            <ImageView
+                android:id="@+id/iv_armor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/iv_weapon"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/role_armor" />
+
+            <ImageView
+                android:id="@+id/iv_skill"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/iv_weapon"
+                android:layout_marginTop="155dp"
+                android:background="@drawable/role_skill" />
+
+            <ImageView
+                android:id="@+id/iv_energyskill"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/iv_weapon"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/role_energyskill" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="生  命  值：" />
+
+                <TextView
+                    android:id="@+id/t_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="内        力：" />
+
+                <TextView
+                    android:id="@+id/t_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="攻  击  力：" />
+
+                <TextView
+                    android:id="@+id/t_atk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="防  御  力：" />
+
+                <TextView
+                    android:id="@+id/t_def"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="攻击速度：" />
+
+                <TextView
+                    android:id="@+id/t_attack_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="闪        避：" />
+
+                <TextView
+                    android:id="@+id/t_dodge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="敏        锐：" />
+
+                <TextView
+                    android:id="@+id/t_critical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="反        击：" />
+
+                <TextView
+                    android:id="@+id/t_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="道具"
+        android:textSize="18dp"
+        android:gravity="center"/>
+
+    <game.xh.indie.com.jianghu.activity.widget.ScrollViewWithBorder
+        android:id="@+id/s_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scrollbars="vertical"
+        app:layout_borderWidth="1dp"
+        app:layout_borderColor="#848484"
+        android:fillViewport="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_item_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </game.xh.indie.com.jianghu.activity.widget.ScrollViewWithBorder>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银两："
+            android:gravity="center"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/t_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="负重："
+            android:gravity="center"
+            android:layout_marginLeft="250dp"/>
+
+        <TextView
+            android:id="@+id/t_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="290dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
